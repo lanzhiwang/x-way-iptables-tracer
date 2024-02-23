@@ -19,6 +19,13 @@ var (
 )
 
 func extendIptablesPolicy(lines []string, traceID int, traceFilter string, fwMark, packetLimit int, traceRules bool, nflogGroup int) ([]string, map[int]iptablesRule, int) {
+	// lines []string
+	// traceID int         3063
+	// traceFilter string  -p udp --dport 53
+	// fwMark              0
+	// packetLimit int     0
+	// traceRules bool     false
+	// nflogGroup int      22
 	var newIptablesConfig []string
 	maxChainNameLength := 0
 	ruleMap := make(map[int]iptablesRule)
